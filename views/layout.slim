@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title Westwinds Wire (Control Computer)
+    == javascript_tag 'jquery.min'
+    == stylesheet_tag 'bootstrap.min'
+  body
+    header.navbar.navbar-default
+      .navbar-header
+        a.navbar-brand(href='/') Westwinds Wire
+        button.navbar-toggle(type='button' data-toggle='collapse' data-target='#navbar-main')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+      .navbar-collapse.collapse#navbar-main
+        ul.nav.navbar-nav
+          li
+            a(href='/cameras') Camera Switcher
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href='#') link
+    div.container#main-container
+      == yield
+
