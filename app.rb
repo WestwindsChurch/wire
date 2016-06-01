@@ -33,7 +33,7 @@ class App < Sinatra::Base
   get '/key' do
     key = params[:key]
     puts "Sending key: #{key}"
-    res = `$(which osascript) key.scpt #{key}`
+    res = `osascript key.scpt #{key}`
     puts "Result: #{res}"
     res
   end
